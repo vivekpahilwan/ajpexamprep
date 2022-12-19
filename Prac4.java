@@ -6,32 +6,35 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Prac4 {
-    public static void main(String args[]) {
-        Frame f = new Frame();
-        f.setVisible(true);
-        f.setBounds(50, 50, 500, 500);
-        f.setLayout(new FlowLayout());
-        CardLayout cl = new CardLayout(30, 40);
-        Container c = new Container();
-        
-        c.setLayout(cl);
-        Button b1 = new Button("Button 1");
-        Button b2 = new Button("Button 2");
-        Button b3 = new Button("Button 3");
+public class Prac4 extends JFrame implements ActionListener {
+    CardLayout card;
+    JButton b1, b2, b3;
+    Container c;
 
+    Prac4() {
+        c = getContentPane();
+        card = new CardLayout(40, 30);
+        // create CardLayout object with 40 hor space and 30 ver space
+        c.setLayout(card);
+        b1 = new JButton("Apple");
+        b2 = new JButton("Boy");
+        b3 = new JButton("Cat");
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
         c.add("a", b1);
         c.add("b", b2);
         c.add("c", b3);
-
-        f.add(c);
-
     }
-    void actionPerformed(ActionEvent event){
-        cl.next(c);
 
+    public void actionPerformed(ActionEvent e) {
+        card.next(c);
+    }
+
+    public static void main(String[] args) {
+        Prac4 cl = new Prac4();
+        cl.setSize(400, 400);
+        cl.setVisible(true);
+        cl.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
