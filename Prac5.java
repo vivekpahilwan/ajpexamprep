@@ -14,20 +14,19 @@ public class Prac5 {
 
         MenuBar mb = new MenuBar();
         Menu m1 = new Menu("File");
-        Menu m2 = new Menu("Option");
-        Menu m3 = new Menu("Help");
+        Menu m2 = new Menu("Edit");
+        Menu m3 = new Menu("View");
 
-        MenuItem file1 = new MenuItem("File 1");
-        MenuItem file2 = new MenuItem("File 2");
-        MenuItem file3 = new MenuItem("File 3");
+        MenuItem neww = new MenuItem("New");
+        MenuItem open = new MenuItem("Open");
 
         mb.add(m1);
+
+        m1.add(neww);
+        m1.add(open);
+
         mb.add(m2);
         mb.add(m3);
-
-        m1.add(file1);
-        m2.add(file2);
-        m3.add(file3);
         f.setMenuBar(mb);
 
     }
