@@ -10,7 +10,7 @@ public class Prac3 {
         f.setLayout(new GridLayout(4,3));
         f.setBounds(50,50,500,500);
 
-        TextField tf = new TextField();
+        
         Button b1 = new Button("1");
         Button b2 = new Button("2");
         Button b3 = new Button("3");
