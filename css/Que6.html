@@ -10,11 +10,14 @@
 <body>
     <script>
         function findmax(arr){
+            //First sorted the array in ascending order
             var a = arr.sort();
+            
+            //took the value that will be at last , obviously the largest(not when there are 2 digits) and stored it into a variable m using math.max function
             var m = Math.max(a.length);
             return m;
         }
-        document.write(findmax([6,8,2,9,5,4,3,7,1]));
+        document.write(findmax([6,8,2,9,5,1,3,7,1]));
     </script>
 </body>
 
