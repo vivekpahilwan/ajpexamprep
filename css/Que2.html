@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Write a JavaScript program to create a new string from a given string, 
+        removing the first and last characters of the string if the first or last 
+        characters are 'P'. Return the original string if the condition is not 
+        satisfied</title>
+</head>
+
+<body>
+    <script>
+    
+
+        function fun1(str) {
+
+            //declared 2 variables which indicate starting and ending point of string
+            //pointers
+            var start_pos = 0;
+            var end_pos = str.length;
+
+            //if the character at start is P then set starting pointer to 1
+            if (str.charAt(0) == 'P') {
+                start_pos = 1;
+            }
+
+
+            //if the ending character of string is P then reduce the end pointer by 1
+            if (str.charAt(str.length - 1) == 'P') {
+                end_pos--;
+                
+            }
+
+
+            //return the string from strating point to end point using substring function
+            return str.substring(start_pos, end_pos);
+        }
+
+        document.write(fun1("Python"));
+        document.write(fun1("JavaScript"));
+
+    </script>
+</body>
+
+</html>

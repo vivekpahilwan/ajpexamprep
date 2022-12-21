@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Write a JavaScript program to concatenate two strings and return the
+        result. If the length of the strings are not same then remove the
+        characters from the longer string.</title>
+</head>
+
+<body>
+    <Script>
+
+        //Desclared a fun which will accept 2 string parameters 
+        function strconcat(str1, str2) {
+
+            //storing the smaller value in variable m
+            var m = Math.min(str1.length, str2.length);
+
+            // it will return the 
+            return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+        }
+
+        document.write(strconcat("Hello", "Javas"));
+
+
+    </Script>
+</body>
+
+</html>
