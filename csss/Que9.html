@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Write a JavaScript program to compute the sum of all digits that occur in 
+    a given string. -->
+
+<head>
+    <title>Q9</title>
+</head>
+
+<body>
+    <script>
+        function sum_digits_from_string(dstr) {
+            var dsum = 0;
+
+            for (var i = 0; i < dstr.length; i++) {
+
+                //by using test function check if all the positions of array are having the characters between 0 to 9 
+                
+                //if they are present it will return true
+                if (/[0-9]/.test(dstr[i])) {
+                    dsum = dsum + parseInt(dstr[i]);
+                }
+            }
+            return dsum;
+        }
+
+        document.write(sum_digits_from_string("abcd12efg91"));
+
+
+    </script>
+
+    <script>
+        function addall(str){
+            sum = 0;
+            for(var i =0 ; i< str.length;i++){
+                if(/[0-9]/.test(str[i])){
+                    sum = sum + parseInt(str[i]);
+                }
+            }
+            return sum;
+        }
+
+        document.write(addall("hello12345"));
+    </script>
+</body>
+
+</html>
