@@ -11,16 +11,20 @@
 <body>
     <p id="p"></p>
     <script>
+
+        //take an array
         var arr = [2, 4, 5, 7, 9, 3, 20, 10, 50, 0, 6, 1, 8];
+
+        //sort function
+        // pass a parameter in sort function
+        //the parameter is a function which 
+            //takes 2 paras a & b and returns a-b
         arr.sort(function (a, b) { return a - b; });
+
+        //print the last element of array
+        //array's last element is at position -> array's length - 1
         document.write(arr[arr.length-1]);
         
-        // arr.reverse();
-        // var m = Math.max(arr.length);
-        // document.write(arr);
-        // document.write(m);
-        // var big = arr.elementAt(m-2);
-        // document.write(big);
     </script>
 </body>
 

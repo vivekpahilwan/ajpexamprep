@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Write a JavaScript program to convert temperatures to and from
+        Celsius, Fahrenheit.
+        [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f =
+        temperature in Fahrenheit ]
+        Expected Output :
+        60°C is 140 °F
+        45°F is 7.222222222222222°C</title>
+</head>
+
+<body>
+    <p>Enter Temperature</p>
+    <input type="text" name="temperature" id="temp">
+    <br><br>
+    <input type="button" id="ctof" onclick="ctof()" value="celcius --> Farenheit">
+    <input type="button" id="ftoc" onclick="ftoc()" value="Farenheit --> celcius">
+    <p id="f"></p>
+    <p id="c"></p>
+    <script>
+
+
+        function ctof() {
+            //get value in the function ,not outside the function
+            var temp = document.getElementById('temp').value;
+            var farenheit = temp * (9 / 5) + 32;
+
+            document.getElementById('f').innerHTML = "Celcuis to Farenheit is :" + farenheit;
+        }
+
+        function ftoc() {
+            var temp = document.getElementById('temp').value;
+            var celcius = [(temp - 32) * 5] / 9;
+            document.getElementById('c').innerHTML = "Farenheit to celcuis is : F  \u00B0" + celcius;
+        }
+    </script>
+</body>
+
+</html>
