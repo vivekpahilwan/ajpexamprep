@@ -18,11 +18,15 @@
     <p id="p"></p>
     <script>
         function fun() {
+            //storing the value of input into variables
             var s1 = document.getElementById('s1').value;
             var s2 = document.getElementById('s2').value;
 
+            //use Math.min(var,var) to find the smaller one and store it in m
             var m = Math.min(s1.length, s2.length);
 
+            // substract m from both strings and add them
+            //store the value in result and display it
             var res = s1.substring(s1.length - m) + s2.substring(s2.length - m);
 
             document.getElementById('p').innerHTML = res;
