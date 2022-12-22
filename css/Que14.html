@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Write a JavaScript program to concatenate two strings and return
+        the result. If the length of the strings is not same then remove the
+        characters from the longer string</title>
+
+    <style>
+        #p {
+            width: 200px;
+            height: 100px;
+            border: solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <p>String 1</p>
+        <input type="text" name="" id="s1">
+        <p>String 2</p>
+        <input type="text" name="" id="s2">
+        <br><br>
+        <button onclick="fun()">concatenate</button>
+        <p id="p"></p>
+    </center>
+    <script>
+        function fun() {
+            //store value from input into 2 variables
+            var s1 = document.getElementById('s1').value;
+            var s2 = document.getElementById('s2').value;
+
+            //use Math.min method to know which string length is smaller
+            //store it into m
+            var m = Math.min(s1.length, s2.length);
+
+            //substract m from length of 1st & 2nd string 
+            //store s1 + s2 into result
+            var res = s1.substring(s1.length - m) + s2.substring(s2.length - m);
+
+            document.getElementById('p').innerHTML = res;
+        }
+    </script>
+</body>
+
+</html>
