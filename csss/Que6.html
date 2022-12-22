@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Write a JavaScript program to find the kth greatest element of a given
+        array of integers -->
+    <title> Q6
+    </title>
+</head>
+
+<body>
+    <p id="p"></p>
+    <script>
+        var arr = [2, 4, 5, 7, 9, 3, 20, 10, 50, 0, 6, 1, 8];
+        arr.sort(function (a, b) { return a - b; });
+        document.write(arr[arr.length-1]);
+        
+        // arr.reverse();
+        // var m = Math.max(arr.length);
+        // document.write(arr);
+        // document.write(m);
+        // var big = arr.elementAt(m-2);
+        // document.write(big);
+    </script>
+</body>
+
+</html>

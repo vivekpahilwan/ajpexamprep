@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- write a JavaScript program to concatenate two strings and return the 
+    result. If the length of the strings are not same then remove the 
+    characters from the longer string. -->
+    <title>Q1</title>
+</head>
+
+<body>
+    str1
+    <input type="text" name="" id="s1">
+    str2
+    <input type="text" name="" id="s2">
+    <br><br>
+    <button onclick="fun()">Concatenate</button>
+    <p id="p"></p>
+    <script>
+        function fun() {
+            var s1 = document.getElementById('s1').value;
+            var s2 = document.getElementById('s2').value;
+
+            var m = Math.min(s1.length, s2.length);
+
+            var res = s1.substring(s1.length - m) + s2.substring(s2.length - m);
+
+            document.getElementById('p').innerHTML = res;
+        }
+
+    </script>
+</body>
+
+</html>

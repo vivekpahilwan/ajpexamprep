@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>write a JavaScript program to compute the sum of cubes of all
+        integer from 1 to a given integer</title>
+</head>
+
+<body>
+    <script>
+        function cube(n) {
+            var sum = 0;
+            for (var i = 0; i <= n; i++) {
+                sum = sum + Math.pow(i,3);
+            }
+            return sum;
+        }
+        document.write(cube(2));
+    </script>
+</body>
+
+</html>

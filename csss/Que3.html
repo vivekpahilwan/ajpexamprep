@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Write a JavaScript program to test whether an array of integers of length 
+    2 contains 1 or a 3. -->
+
+    <title>Q3</title>
+</head>
+
+<body>
+    <script>
+        function fun(arr) {
+            if (arr.indexOf(1) != -1 || arr.indexOf(3) != -1) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        document.write(fun([1, 4]));
+        document.write(fun([2, 4]));
+    </script>
+</body>
+
+</html>
