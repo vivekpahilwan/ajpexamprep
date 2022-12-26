@@ -30,6 +30,6 @@ public class Prac12 extends Frame implements ActionListener {
     }
 
     public static void main(String args[]) {
-        Prac12 obj = new Prac12();
+        new Prac12();
     }
 }

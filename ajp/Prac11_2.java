@@ -10,7 +10,6 @@ public class Prac11_2 extends Frame implements MouseMotionListener {
         setSize(500, 500);
         add(l);
         l.addMouseMotionListener(this);
-
     }
 
     public void mouseMoved(MouseEvent e) {
