@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between setinterval and settimeout</title>
+</head>
+<body>
+    Set Timeout:
+    <p id="p1"></p><br>
+    Set Interval:
+    <p id="p2"></p>
+    <script>
+        var i = 0;
+        setInterval(intfunc, 1);
+        function intfunc() {
+            document.getElementById('p2').innerHTML = document.getElementById('p2').innerHTML + i + "<br>";
+            i++;
+        }
+        function timefunc() {
+            document.getElementById('p1').innerHTML = "Welcome";
+        }
+        setTimeout(timefunc, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+</head>
+<body>
+    Employee id:
+    <input type="text" id="t1"onkeyup="fun1()">
+    <br><br>
+    Employee Name:
+    <input type="text"id="t2"onkeyup="fun2()">
+    <br><br>
+    Employee Mob.no.
+    <input type="text"id="t3">
+    <br><br>
+    Employee Email :
+    <input type="text"id="t4">
+    <br><br>
+    <script>
+        function fun1(){
+            var id=document.getElementById("t1");
+            if(id.value.length>4 && id.value.length<10)
+            {
+                for(var j=0;j<id.value.length;j++)
+                {
+                    if(id.value.charAt(j)>='0'&& id.value.charAt('j')<='9')
+                    {
+                        id.style.background="green";
+                    }
+                    else
+                    {
+                        id.style.background="red";
+                    }
+                }
+            }
+            else
+            {
+                id.style.background="red";
+            }
+        }
+        function fun2()
+        {
+            var name=document.getElementById("t2")
+            if(name.value.length>=6 && name.value.length<=12)
+            {
+                for(var k=0;k<name.value.length;k++)
+                {
+                    if(name.value.charAt(k)>='A'&& name.value.charAt(k)<='Z' ||name.value.charAt(k)>='a'&&name.value.charAt(k)<='z')
+                    {
+                        name.style.background="green";
+                    }
+                    else
+                    {
+                        name.style.background="red";
+                    }
+                }
+            }
+            else
+            {
+            name.style.background="red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 7. Write a JavaScript program to switch case of the minimum possible 
+number of letters to make a given string written in the upper case or in 
+the lower case.
+Fox example "Write" will be “write” and "PHp" will be "PHP" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+</head>
+<body>  
+    <script>
+        function testStr(str) {
+            var l = 0, u = 0;
+            for(var i = 0; i < str.length; i++) {
+                if(/[A-Z]/.test(str[i])) {
+                    u++;
+                }
+                else {
+                    l++;
+                }
+                if(l > u) {
+                    return str.toLowerCase();
+                }
+                else {
+                    return str.toUpperCase();
+                }
+            }
+        }
+        document.write(testStr("Write") + "<br>");
+        document.write(testStr("Php") + "<br>");
+    </script>
+</body>
+</html>

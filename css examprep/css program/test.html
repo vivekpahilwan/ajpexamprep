@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            height: 200px;
+            width:200px;
+            border: 1px solid black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <form action="">
+        enter first name:
+        <br>
+        <input type="text" id="f_name" name="fname"> <br>
+        enter last name:
+        <br>
+        <input type="text" id="l_name" name="lname">
+        <br> <br>
+        <input type="button" value="click" onclick="fun(this.form)" >
+        <br>
+    </form>
+</head>
+<body>
+    <div id="d"></div>
+    <script>
+        function fun(form){
+            var testvar=document.getElementById("f_name").value;
+            document.getElementById("d").innerHTML="welcome "+testvar;
+            document.getElementById("d").style.color="aqua";
+        }
+    </script>
+    
+</body>
+</html>

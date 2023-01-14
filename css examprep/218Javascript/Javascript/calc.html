@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form name="Calculator" action="" method="get">
+        <label>1st Number:</label>
+        <input type="text" name="num1" placeholder="Enter First Number"><br>
+        <label>2nd Number:</label>
+        <input type="text" name="num2" placeholder="Enter Second Number"><br>
+        <input type="button" name="btn" id="add" value="+" onclick="arithmetic(this.form, this.id)">
+        <input type="button" name="btn" id="sub" value="-" onclick="arithmetic(this.form, this.id)">
+        <input type="button" name="btn" id="mul" value="*" onclick="arithmetic(this.form, this.id)">
+        <input type="button" name="btn" id="div" value="/" onclick="arithmetic(this.form, this.id)">
+    </form>
+    <script>
+        function arithmetic(form,id) {
+            var num1 = form.num1.value;
+            var num2 = form.num2.value;
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var sum,sub,mul,div;
+            var ch = id;
+            switch (ch) {
+                case "add":
+                    sum = num1 + num2;
+                    document.write(sum);
+                    break;
+
+                case "sub":
+                    sub = num1 - num2;
+                    document.write(sub);
+                    break;
+
+                case "mul":
+                    mul = num1 * num2;
+                    document.write(mul);
+                    break;
+
+                case "div":
+                    div = num1 / num2;
+                    document.write(div);
+                    break;
+                    
+                default:
+                    document.write("Wrong Choice");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

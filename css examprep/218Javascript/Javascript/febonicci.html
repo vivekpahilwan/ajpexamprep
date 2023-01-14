@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Febonicci</title>
+</head>
+<body>
+    <script>
+        var num = parseInt(prompt("Enter the number of terms: "));
+        var a = 0, b = 1, next;
+        for(var i = 0; i <= num; i++) {
+            document.write(a + ", ");
+            next = a + b;
+            a = b;
+            b = next;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<center>
+    First Name: <input type="text" name="fname" id="fname"><br><br>
+    Middle Name: <input type="text" name="mname" id="fname"><br><br>
+    Last Name:<input type="text" name="lname" id="lname"><br><br>
+    Gender:<input type="radio" name="gen" value="male" id="Gender">male
+    <input type="radio" name="gen" value="female"id="Gender">female<br><br>
+    Subjects:<input type="checkbox" name="sub" value="CSS"id="subjects">CSS
+    <input type="checkbox" name="sub" value="AJP">AJP
+    <input type="checkbox" name="sub" value="STE">STE
+    <input type="checkbox" name="sub" value="OSY">OSY
+    <input type="checkbox" name="sub" value="EST">EST
+    <h4>Address:</h4>
+    <textarea name="address"cols="20" rows="5" id="address"></textarea><br>
+
+    <select name="city" id="city">
+        <option>Kopergaon</option>
+        <option>Pohegaon</option>
+        <option>Yeola</option>
+        <option>sanwatsar</option>
+    </select>
+
+    
+    <select name="District" id="district">
+        <option>Ahamadnagar</option>
+        <option>Pune</option>
+        <option>Satara</option>
+        <option>Mumbai</option>
+    </select><br><br>
+
+    <input type="button" name="button" id="btn" value="Add" onclick="AddRow()"><br><br>
+
+    <table id="show" border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Subjects</th>
+                <th>address</th>
+                <th>city</th>
+                <th>district</th>
+            </tr>
+        </thead>
+    </table>
+
+</center>
+
+
+    <script>
+
+        var list1 = [];
+        var list2 = [];
+        var list3 = [];
+        var list4 = [];
+        var list5 = [];
+        var list6 = [];
+        var list7 = [];
+        var list8 = [];
+
+        var n = 1;
+        var x = 0;
+
+        function AddRow() {
+
+            var AddRown = document.getElementById('show');
+            var NewRow = AddRown.insertRow(n);
+
+            list1[x] = document.getElementById("fname").value;
+            list2[x] = document.getElementById("mname").value;
+            list3[x] = document.getElementById("lname").value;
+            list4[x] = document.getElementById("Gender").value;
+            list5[x] = document.getElementById("subjects").value;
+            list6[x] = document.getElementById("address").value;
+            list7[x] = document.getElementById("city").value;
+            list8[x] = document.getElementById("district").value;
+
+            var cel1 = NewRow.insertCell(0);
+            var cel2 = NewRow.insertCell(1);
+            var cel3 = NewRow.insertCell(2);
+            var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+            var cel6 = NewRow.insertCell(5);
+            var cel7 = NewRow.insertCell(6);
+            var cel8 = NewRow.insertCell(7);
+            
+
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+            cel4.innerHTML = list4[x];
+            cel5.innerHTML = list5[x];
+            cel6.innerHTML = list6[x];
+            cel7.innerHTML = list7[x];
+            cel8.innerHTML = list8[x];
+
+            n++;
+            x++;
+        }
+
+    </script>
+</body>
+
+</html>

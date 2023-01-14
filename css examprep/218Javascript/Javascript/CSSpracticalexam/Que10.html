@@ -1,0 +1,22 @@
+<!-- 10. Write a JavaScript program to compute the sum of cubes of all 
+integer from 1 to a given integer. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Enter a number: ");
+        var total = 0, i = 1;
+        while(i <= n) {
+            total += (i*i*i);
+            i++;
+        }
+        document.write("Total of Cube's upto " + n + " is: <b>" + total + "</b><br>");
+    </script>
+</body>
+</html>

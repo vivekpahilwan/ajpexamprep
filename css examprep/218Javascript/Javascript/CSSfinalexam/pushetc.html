@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Explain push() , pop() , shift() and reverse() with the help of an example.</title>
+</head>
+<body>
+    <script>
+        var arr = [45, 32, 1, 78, 6];
+        //Printing array
+        document.write("Original Array: ");
+        for(var i of arr) {
+            document.write(i + " ");
+        }//45,32,1,78,6
+
+        //pop
+        arr.pop();
+        document.write("<br>After using pop: ");
+        for(i of arr) {
+            document.write(i + " "); 
+        }//45,32,1,78
+
+        //push
+        arr.push(8);
+        document.write("<br>After using push: ");
+        for(i of arr) {
+            document.write(i + " ");
+        }//45,32,1,78,8
+
+        //shift
+        arr.shift();
+        document.write("<br>After using shift: ");
+        for(i of arr) {
+            document.write(i + " ");
+        }//32,1,78,8
+
+        //unshift
+        arr.unshift(56);
+        document.write("<br>After using unshift: ");
+        for (i of arr) {
+            document.write(i + " ");
+        }//56,32,1,78,8
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- 1. Write a JavaScript program to concatenate two strings and return the 
+result. If the length of the strings are not same then remove the 
+characters from the longer string. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body></body>
+<script>
+    function strconcat(str1, str2) {
+        var m = Math.min(str1.length, str2.length);
+        return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+    }
+    document.write(strconcat("HelloWorld", "Javas"));
+</script>
+</html>

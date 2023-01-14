@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var num1, num2;
+        var ch;
+        function addition() {
+            num1 = prompt("Enter First Number: ");
+            num2 = prompt("Enter Second Number: ");
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var sum = num1 + num2;
+            alert("Addition of "+num1+" and "+num2+" is: "+sum);
+        }
+        function substraction() {
+            num1 = prompt("Enter First Number: ");
+            num2 = prompt("Enter Second Number: ");
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var sub = num1 - num2;
+            alert("Substraction of "+num1+" and "+num2+" is: "+sub);
+        }
+        function multiplication() {
+            num1 = prompt("Enter First Number: ");
+            num2 = prompt("Enter Second Number: ");
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var mul = num1 * num2;
+            alert("Multiplication of "+num1+" and "+num2+" is: "+mul);
+        }
+        function division() {
+            num1 = prompt("Enter First Number: ");
+            num2 = prompt("Enter Second Number: ");
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var div = num1 / num2;
+            alert("Division of "+num1+" and "+num2+" is: "+div);
+        }
+        do {
+            ch = prompt("Select a Operation:  1.Addition  2.Substraction  3.Multiplication  4.Division ");
+            ch = parseInt(ch);
+            switch (ch) {
+                case 1:
+                    addition();
+                    break;
+                case 2:
+                    substraction();
+                    break;
+                case 3:
+                    multiplication();
+                    break;
+                case 4:
+                    division();
+                    break;
+                default:
+                    alert("Wrong Choice!");
+                    break;
+            }
+            var ch1 = prompt("Do you want to enter another choice: ");
+        }
+        while(ch1=="y" || ch1=="Y" || ch1=="Yes" || ch1=="yes");
+    </script>
+</body>
+</html>

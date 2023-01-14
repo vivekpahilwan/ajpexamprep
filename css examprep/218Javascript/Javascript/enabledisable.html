@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable and Disable Elements</title>
+</head>
+<body>
+    <form action="">
+        <!--First Name-->
+        <label for="fn">Firstname</label>
+        <input type="text" name="fname" id="fn" onchange="func1()" placeholder="Firstname">
+        <br>
+        <!--Last Name-->
+        <label for="ln">Lastname</label>
+        <input type="text" name="lname" id="ln" onkeyup="func2()" disabled placeholder="Lastname">
+        <br><br>
+        <!--Class-->
+        <label for="class">Class</label>
+        <input type="radio" name="class" id="fy" disabled onclick="func3()">
+        <input type="radio" name="class" id="sy" disabled onclick="func3()">
+        <input type="radio" name="class" id="ty" disabled onclick="func3()">
+        <br><br><br>
+        <!--Button-->
+        <input type="button" value="Submit" id="b1" disabled>
+    </form>
+    <script>
+        // var t1 = document.getElementByLd('fn');
+        // var t2 = document.getElementById('ln');
+        // var r1 = document.getElementById('fy');
+        // var r2 = document.getElementById('sy');
+        // var r3 = document.getElementById('ty');
+        // var b1 = document.getElementById('b1');
+        function func1() {
+            if(document.getElementByLd('fn').value == "" && document.getElementByLd('ln').value == "") {
+                document.getElementByLd('ln').disabled = true;
+                // r1.disabled = true;
+                // r2.disabled = true;
+                // r3.disabled = true;
+                document.getElementByLd('b1').disabled = true;
+            }
+            else {
+                document.getElementByLd('ln').disabled = false;
+                // r1.disabled = true;
+                // r2.disabled = true;
+                // r3.disabled = true;
+                document.getElementByLd('b1').disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

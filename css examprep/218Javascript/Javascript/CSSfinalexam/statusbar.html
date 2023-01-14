@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Bar</title>
+</head>
+<body onload="scroll_function('The Text is Moving', 100)">
+    <!-- <a href="google.com" onmouseover = "'Hello World';return true" onmouseout = "'';return true">Hover Over ME</a> -->
+    <p>Watch The Text Scroll</p>
+</body>
+<script>
+    var currentPos = 0;
+    var targetPos = 100;
+    var blanks = "";
+    function scroll_function(msg, milliseconds) {
+        window.setInterval("display('' + msg + '')", milliseconds);
+    }
+    function display(msg) {
+        window.status = blanks + msg;
+        ++currentPos;
+        blanks += "";
+        if(currentPos > targetPos) {
+            currentPos = 0;
+            blanks = "";
+        }
+    }
+</script>
+</html>

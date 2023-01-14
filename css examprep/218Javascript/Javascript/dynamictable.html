@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<body>
+    <center>
+        <table>
+            <form action="">
+                <br><br>
+                Enter First Name:
+                <input type="text" name="Fname" id="fn"><br><br>
+                Enter Middle Name: 
+                <input type="text" name="Mname" id="mn"><br><br>
+                Enter Last Name:
+                <input type="text" name="Lname" id="ln"><br><br>
+                Gender:
+                <input type="radio" name="gen" id="m" value="Male">Male
+                <input type="radio" name="gen" id="f" value="Female">Female<br><br>
+                Subjects:<br>
+                <input type="checkbox" name="subject" id="css" value="CSS">CSS<br>
+                <input type="checkbox" name="subject" id="ste" value="STE">STE<br>
+                <input type="checkbox" name="subject" id="osy" value="OSY">OSY<br>
+                <input type="checkbox" name="subject" id="ajp" value="AJP">AJP<br>
+                <input type="checkbox" name="subject" id="est" value="EST">EST<br>
+                <input type="checkbox" name="subject" id="adbms" value="ADBMS">ADBMS<br>
+                <input type="checkbox" name="subject" id="anw" value="ANW">ANW<br><br>
+                Address:<br>
+                <textarea name="address" id="addre" cols="30" rows="5"></textarea><br><br>
+                City:
+                <select name="City" id="c">
+                    <option value="Pune">Pune</option>
+                    <option value="Kopargaon">Kopargaon</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                </select><br><br>
+                State:
+                <select name="State" id="s">
+                    <option value="Maharastra">Maharashtra</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                </select><br><br>
+                <input type="button" value="Submit" id="btn" onclick="addRow()">
+                <input type="button" value="Reset" id="res" onclick="this.form.reset()"><br><br><br><br>
+            </form>
+            <table border="1px" id="datatable">
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Subjects</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </table>
+            <br><br><br><br>
+        </table>
+    </center>
+</body>
+<script>
+    var col1 = [];
+    var col2 = [];
+    var col3 = [];
+    var col4 = [];
+    var col5 = [];
+    var col6 = [];
+    var col7 = [];
+    var col8 = [];
+    var n = 1, i = 0;
+    function addRow() {
+        var row = document.getElementById("datatable");
+        var NewRow = row.insertRow(n);
+
+        var gen = document.getElementsByName("gen");
+        for(var j in gen) {
+            if(gen[j].checked) {
+                var gender = gen[j].value;
+            }
+        }
+
+        var sub = document.getElementsByName("subject");
+        var subs = "";
+        for(var j=0; j<sub.length; j++) {
+            if(sub[j].checked) {
+                subs = subs + " " + sub[j].value;
+            }
+        }
+
+        var city = document.getElementById("c");
+        var selectcity = city.options[city.selectedIndex].text;
+
+        var state = document.getElementById("s");
+        var selsectstate = state.options[state.selectedIndex].text;
+
+        col1[i] = document.getElementById("fn").value;
+        col2[i] = document.getElementById("mn").value;
+        col3[i] = document.getElementById("ln").value;
+        col4[i] = gender;
+        col5[i] = subs;
+        col6[i] = document.getElementById("addre").value;
+        col7[i] = selectcity;
+        col8[i] = selsectstate;
+
+        var cell1 = NewRow.insertCell(0);
+        var cell2 = NewRow.insertCell(1);
+        var cell3 = NewRow.insertCell(2);
+        var cell4 = NewRow.insertCell(3);
+        var cell5 = NewRow.insertCell(4);
+        var cell6 = NewRow.insertCell(5);
+        var cell7 = NewRow.insertCell(6);
+        var cell8 = NewRow.insertCell(7);
+
+        cell1.innerHTML = col1[i];
+        cell2.innerHTML = col2[i];
+        cell3.innerHTML = col3[i];
+        cell4.innerHTML = col4[i];
+        cell5.innerHTML = col5[i];
+        cell6.innerHTML = col6[i];
+        cell7.innerHTML = col7[i];
+        cell8.innerHTML = col8[i];
+
+        n++;
+        i++;
+    }
+</script>
+</html>

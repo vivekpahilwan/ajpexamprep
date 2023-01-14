@@ -1,0 +1,30 @@
+<!-- 8. Write a JavaScript program to sort the strings of a given array of strings 
+in the order of increasing lengths -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+</head>
+<body>
+    <script>
+        var arr = ['xyz', 'acd', 'aa', 'bb', '', 'a', 'b'];
+        function sortarrstr(arrstr) {
+            var temp;
+            for(var i = 0; i < arrstr.length; i++) {
+                for(var j = i + 1; j < arrstr.length; j++) {
+                    if(arrstr[i].length > arrstr[j].length) {
+                        temp = arrstr[i];
+                        arrstr[i] = arrstr[j];
+                        arrstr[j] = temp;
+                    }
+                }
+            }
+            return arrstr;
+        }
+        document.write(sortarrstr(arr));
+    </script>
+</body>
+</html>

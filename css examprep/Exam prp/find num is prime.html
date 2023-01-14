@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find if a number is prime or not</title>
+</head>
+
+<body>
+    <script>
+        var num = prompt("Enter a number");
+        flag = 0;
+        if( num ==1){
+            alert("Neither prime nor composite");
+        }
+        
+        for(var i = 2 ; i<num; i++){
+            if(num % 2 ==0){
+                flag++;
+                break;
+            }
+        }
+        if(flag ==0){
+            alert("prime");
+        }else{
+            alert("Not prime");
+        }
+    </script>
+</body>
+
+</html>

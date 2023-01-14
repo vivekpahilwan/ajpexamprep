@@ -1,0 +1,27 @@
+<!-- 6. Write a JavaScript program to find the kth greatest element of a given 
+array of integers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+    <script>
+        function getkth() {
+            var k = 3;
+            var arr = [5, 3, 8, 4, 31, 17, 2, 6, 1];
+            document.write("Array is: <b>" + arr + "</b><br>");
+            arr = arr.sort(function(a, b) {
+                return b - a;
+            });
+            document.write("Sorted Array is: <b>" + arr + "</b><br>");
+            var res = arr[k - 1];
+            document.write("Kth Greatest Element is: <b>" + res + "</b><br>");
+        }
+        getkth();
+    </script>
+</body>
+</html>

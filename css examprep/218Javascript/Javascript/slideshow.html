@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+</head>
+<body onload="nextBanner()">
+    <center>
+        <img src="" alt="Slideshow" id="image" width="500px"><br>
+        <button onclick="nextSlide(-1)">Previous</button>
+        <button onclick="nextSlide(1)">Next</button>
+    </center>
+    <script>
+        var imgArr = ['1.png', '2.jpg', '3.jpg', '4.png']; 
+        var i = 0, j = 0;
+        var img = document.getElementById("image");
+        img.src = imgArr[i];
+        setInterval(nextBanner, 3000);
+        function nextBanner() {
+            if(j == 0) {
+                j = imgArr.length - 1;
+            }
+            if(j >= imgArr.length - 1) {
+                j = 0;
+            }
+            img.src = imgArr[j];
+            j++;
+        }
+        function nextSlide(status) {
+            if(status == -1) {
+                if(i == 0) {
+                    i = imgArr.length - 1;
+                }
+                else {
+                    i = i + status;
+                }
+                img.src = imgArr[i];
+            }
+            else if(status == 1) {
+                if(i >= imgArr.length - 1) {
+                    i = 0;
+                }
+                else {
+                    i = i + status;
+                }
+                img.src = imgArr[i];
+            }
+        }
+    </script>
+</body>
+</html>

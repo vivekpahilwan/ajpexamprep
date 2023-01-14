@@ -1,0 +1,30 @@
+<!-- 2. Write a JavaScript program to create a new string from a given string, 
+removing the first and last characters of the string if the first or last 
+characters are 'P'. Return the original string if the condition is not 
+satisfied. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter a String: ");
+        function myFunc(str) {
+            var start_pos = 0;
+            var end_pos = str.length;
+            if(str.charAt(0) == 'P') {
+                start_pos = 1;
+            }
+            if(str.charAt(str.length - 1) == 'P') {
+                end_pos--;
+            }
+            return str.substring(start_pos, end_pos);
+        }
+        document.write(myFunc(str));
+    </script>
+</body>
+</html>

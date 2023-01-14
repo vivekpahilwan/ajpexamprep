@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <script>
+        var origin1 = location.origin;
+        var origin2 = location.hash;
+        var origin3 = location.hostname;
+        var origin4 = location.host;
+        var origin5 = location.pathname;
+        var origin6 = location.port;
+        var origin7 = location.protocol;
+        var origin8 = location.search;
+        document.getElementById("demo1").innerHTML = origin1;
+        document.getElementById("demo2").innerHTML = origin2;
+        document.getElementById("demo3").innerHTML = origin3;
+        document.getElementById("demo4").innerHTML = origin4;
+        document.getElementById("demo5").innerHTML = origin5;
+        document.getElementById("demo6").innerHTML = origin6;
+        document.getElementById("demo7").innerHTML = origin7;
+        document.getElementById("demo8").innerHTML = origin8;
+    </script>
+</body>
+
+</html>

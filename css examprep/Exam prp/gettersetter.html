@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and setter</title>
+</head>
+
+<body>
+    <script>
+        var student = {
+            name: "Vivek",
+            class: "TYCM",
+            get getInfo() {
+                return this.name + " " + this.class;
+            },
+
+            set setname(n) {
+                this.name = n;
+            }
+        };
+
+        document.write(student.getInfo);
+        student.setname = "Luffy";
+        document.write(student.getInfo);
+    </script>
+
+
+    <!-- <script>
+    var student = {
+        name: "Krish Porwal",
+        class: "TYCM",
+        div: 'C',
+        rollno: "218",
+        get fullinfo() {
+            return this.name + " " + this.class + " " + this.div;
+        },
+        set change(n) {
+            this.name = n;
+        }
+    };
+    document.write(student.fullinfo + "<br>");
+    document.write(student.name + "<br>");
+    document.write(student.rollno() + "<br>");
+    student.change = "zoro";
+    document.write(student.fullinfo);
+</script> -->
+</body>
+
+</html>

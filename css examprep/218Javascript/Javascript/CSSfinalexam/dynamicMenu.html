@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Changing Menu</title>
+</head>
+<body>
+    <center>
+        <form name="f">
+            Select a Semester:<br> 
+            <select name="semester" id="sem" onchange="dynamo(this)">
+                <option value="0">Semester</option>
+                <option value="1">5th Semester</option>
+                <option value="2">6th Semester</option>
+            </select><br><br>
+            Choose Your Elective:<br>
+            <select name="subjects" id="sub">
+                <option value="0">Subjects</option>
+            </select>
+        </form>
+    </center>
+</body>
+<script>
+    var sem5th = ['CSS', 'ADBMS', 'ADN'];
+    var sem6th = ['PHP', 'PWD', 'MAD'];
+    function dynamo(sems) {
+        //clearing the existing options
+        for(var i = document.f.subjects.options.length-1; i > 0; i--) {
+            document.f.subjects.options.remove(i);
+        }
+        //starting the creation
+        var ch = sems.options[sems.selectedIndex].value;
+        switch (ch) {
+            case '1':
+                for(i = 1; i <= sem5th.length; i++) {
+                    document.f.subjects.options[i] = new Option(sem5th[i - 1]);
+                }
+                break;
+            
+            case '2':
+                for(i =1; i <= sem6th.length; i++) {
+                    document.f.subjects.options[i] = new Option(sem6th[i - 1]);
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+</script>
+</html>

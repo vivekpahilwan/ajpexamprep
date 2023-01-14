@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi diamentional array</title>
+</head>
+
+<body>
+    <script>
+        var rows = 2;
+        var cols = 4;
+        var student = new Array(rows);
+
+        for (var i = 0; i < rows; i++) {
+            student[i] = new Array(cols);
+
+        }
+        for (var i = 0; i < rows; i++) {
+            alert("enter data for student no " + i);
+            for (var j = 0; j < cols; j++) {
+                if (j == 0)
+                    student[i][j] = prompt("enter name:");
+                if (j == 1)
+                    student[i][j] = prompt("enter class:");
+                if (j == 2)
+                    student[i][j] = prompt("enter age:");
+                if (j == 3)
+                    student[i][j] = prompt("enter percentage:");
+            }
+        }
+        document.write("student data");
+        document.write('<table border=1>')
+
+        document.write("<tr><td>name</td><td>class</td><td>age</td><td>percentage</td></tr>");
+
+        for (var x of student) {
+            document.write('<tr>');
+
+            for (var y of x) {
+                document.write("<td>" + y + "</td>")
+
+            }
+            document.write('</tr>')
+
+        }
+        document.write('</table>')
+
+        document.write("record with age above 18 and having first class")
+
+        document.write('<table>')
+
+        document.write("<tr><td>name</td><td>class</td><td>age</td><td>percentage</td></tr>");
+
+        /* for (var x = 0; x < student.length; x++) {
+             document.write("<tr>")
+             for (var y = 0; y < student[x].length; y++) {
+                 if (student[x][2] >= 18 && student[x][3] >= 60)
+                     document.write("<td>" + student[x][y] + "</td>")
+ 
+             }
+             document.write("</tr>");
+             document.write("</table>")
+         }*/
+
+        for (var a of student) {
+            //a<student.length;
+            //a++;
+            document.write("<tr>")
+            for (var b of a) {
+                //  b<student[a].length;
+                //b++;
+                if (student[a][2] >= 18 && student[a][3] >= 60)
+                    document.write("<td>" +a+ +b+  "</td>")
+
+            }
+            document.write("</tr>");
+            document.write("</table>")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

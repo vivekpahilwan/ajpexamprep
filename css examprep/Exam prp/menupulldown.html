@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>HTML Form</title>
+
+</head>
+
+<body>
+
+
+
+        <select onchange="getPage(this)">
+            <option value="https://www.google.com">Google</option>
+            <option value="https://www.msbte.org.in">MSBTE</option>
+            <option value="https://www.yahoo.com">Yahoo</option>
+        </select>
+
+</body>
+
+<script>
+
+
+    function getPage(choice) {
+        var page = choice.options[choice.selectedIndex].value;
+        if (page != "") {
+            window.location = page;
+        }
+
+
+    }
+
+
+</script>
+
+</html>

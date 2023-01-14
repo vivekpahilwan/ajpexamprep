@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "Hello World";
+        document.write("Before Replacing: "+str+"<br>");
+        var arr = [];
+        arr = str.split(" ");
+        for(var j of arr) {
+            if(j == "World") {
+                str = str.replace(j,"Javascript");
+            }   
+        }
+        document.write("After Replacing: "+str);
+    </script>
+</body>
+</html>

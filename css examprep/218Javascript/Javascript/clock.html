@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d"></div>
+</body>
+<script>
+    setInterval(setTime,1000);
+    function setTime() {
+        var now = new Date();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        if(sec < 10) {
+            sec = "0" + sec;
+        }
+        if(min < 10) {
+            min = "0" + min;
+        }
+        if(hour < 10) {
+            hour = "0" + hour;
+        }
+        var ap;
+        if(hour < 12) {
+            ap = "AM";
+        }
+        else {
+            ap = "PM";
+        }
+        document.getElementById("d").innerHTML = "<br><h3><font color = 'red'>" + hour + ":</font>" + min + ":" + sec + " " + ap + "</h3>";
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" name="Subject" value="CSS">CSS<br>
+        <input type="checkbox" name="Subject" value="ADBMS">ADBMS<br>
+        <input type="checkbox" name="Subject" value="AJP">AJP<br>
+        <input type="checkbox" name="Subject" value="EST">EST<br>
+        <input type="checkbox" name="Subject" value="OSY">OSY<br>
+        <input type="checkbox" name="Subject" value="ANW">ANW<br>
+        <input type="button" value="Submit" onclick="testButton(this.form)">
+        <input type="text" name="Subjects" id="sub" size="50">
+    </form>
+    <script>
+        function testButton(form) {
+            // var Subject = document.form[0];
+            var txt="";
+            for(var i = 0; i < form.Subject.length; i++) {
+                if(form.Subject[i].checked) {
+                    txt += form.Subject[i].value + " ";
+                }
+            }
+            document.getElementById("sub").value = "Selected Subjects are: " + txt;
+        }
+    </script>
+</body>
+</html>

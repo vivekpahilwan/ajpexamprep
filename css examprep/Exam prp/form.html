@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form onsubmit="validate()">
+        <input type="text" name="uname" id="username" placeholder="Username">
+        <input type="password" name="pass" id="password" placeholder="Password">
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+<script>
+    function validate() {
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        switch (username.value, password.value) {
+            case "vivek", "vivek1234":
+                alert("Go ahead");
+                break;
+
+            case "keyur", "keyur1234":
+                alert("Go ahead");
+                break;
+
+            default:
+                alert("Invalid user");
+                break;
+        }
+    }
+</script>
+
+</html>

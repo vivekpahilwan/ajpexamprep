@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="radio" name="fruit" value="Apple">Apple<br>
+        <input type="radio" name="fruit" value="Strawberry">Strawberry<br>
+        <input type="radio" name="fruit" value="Mango">Mango<br>
+        <input type="radio" name="fruit" value="Orange">Orange<br>
+        <input type="radio" name="fruit" value="Kiwi">Kiwi<br>
+        <input type="radio" name="fruit" value="Banana">Banana<br>
+        <input type="button" value="Click Me" onclick="testButton(this.form)">
+    </form>
+    <script>
+        function testButton(form) {
+            for (var count in form.fruit) {
+                if (form.fruit[count].checked) {
+                    alert(form.fruit[count].value + " is selected.");
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter your text
+    <input type="text" id="inputbox" onkeydown="down()">
+    <br><br>
+    <p id='p'></p>
+    <input type="text" name="inputbox1" id="inputbox1" onkeyup="down1(this.form)">
+    <br><br>
+    <p id='p1'></p>
+
+</body>
+<script>
+    var num=1;
+    function down()
+    {
+        document.getElementById('p').innerHTML="<h3>"+num+"number key is pressed ";
+            num++;
+    }
+    var str=[];
+    function down1(form)
+    {
+        str=form.inputbox1.value
+        for(var i=0;i<str.length;i++)
+        {
+            document.getElementById('p1').innerHTML="<h3>"+" "+str[i]+"key is pressed"
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Students Information</title>
+</head>
+<body>
+    <script>
+        var info = [student1,student2,student3,student4,student5,student6,student7,student8,student9,student10];
+        var student1 = ["Krish",19,"First Class",98];
+        var student2 = ["Vivek",17,"Second Class",75];
+        var student3 = ["Keyur",12,"Second Class",67];
+        var student4 = ["Ishan",32,"First Class",94];
+        var student5 = ["Prajwal",24,"Pass Class",47];
+        var student6 = ["Harish",13,"First Class",84];
+        var student7 = ["Rohit",18,"First Class",86];
+        var student8 = ["Om",16,"Second Class",74];
+        var student9 = ["Krishna",21,"Fail Class",25];
+        var student10 = ["Nilesh",19,"First Class",92]; 
+        document.write("<table border=1>");
+        for(var x of info) {
+            document.write("<tr>");
+            for(var i of x) {
+                if(x[1]>18 && x[2]=="First Class") {
+                    document.write("<td>"+i+"</td>");
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function writeCookie() {
+        if (document.myform.customer.value == "") {
+            alert("enter some value!");
+            return;
+        }
+        cookievalue = escape(document.myform.customer.value) + ";";
+        document.cookie = "name:" + cookievalue;
+        document.write("setting cookies:" + "name= " + cookievalue)
+
+    }
+    function readCookie() {
+        var allCookies = document.cookie;
+        document.write("all cookies:" + allCookies)
+        cookieArray = allCookies.split(';');
+        for (var i = 0; i < cookieArray.length; i++) {
+            name = cookieArray[i].split('=')[0];
+            value = cookieArray[i].split('=')[1];
+
+            document.write("key is: " + name + "and value is: " + value);
+        }
+    }
+</script>
+
+<body>
+    <form action="" name="myform">
+        enter name:
+        <input type="text" name="customer" />
+        <input type="button" value="setCookie" onclick="writeCookie()">
+        <p>click the button and see the result</p>
+
+        <input type="button" value="getCookie" onclick="readCookie()">
+    </form>
+</body>
+
+</html>

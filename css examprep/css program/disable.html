@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    first name:
+    <input type="text" id="fname" placeholder="first name" onkeypress="enableLname()" disabled>
+    <br>
+    last name:
+    <input type="text" name="lname" id="lname" placeholder="last name" onkeypress="enableGen()" disabled>
+    <br>
+    gender:
+    <input type="radio" name="gen" id="gen" onmousedown="enableClass()" disabled>male <br>
+    <input type="radio" name="gen1" id="gen1" onmousedown="enableClass()" disabled>female <br>
+    class:
+    <select id="class" onmousedown="enableSubmit()" disabled>
+        <option value="">FYCM</option>
+        <option value="">SYCM</option>
+        <option value="">TYCM</option>
+        </section>
+        <br>
+        <br>
+        <input type="button" id="submit" value="submit" onclick="submit()">
+
+</body>
+<script>
+    document.getElementById("fname").disabled = false;
+    document.getElementById("lname").disabled = true;
+    document.getElementById("gen").disabled = true;
+    document.getElementById("gen1").disabled = true;
+    document.getElementById("class").disabled = true;
+    document.getElementById("submit").disabled = true;
+
+    function enableLname() {
+        document.getElementById("lname").disabled = false;
+    }
+    function enableGen() {
+        document.getElementById("gen").disabled = false;
+        document.getElementById("gen1").disabled = false;
+    }
+
+    function enableClass() {
+        document.getElementById("class").disabled = false;
+    }
+    function enableSubmit() {
+        document.getElementById("submit").disabled = false;
+    }
+    function submit() {
+        document.write("<h3> welcome " + fname.value + " " + lname.value);
+
+    }
+</script>
+
+</html>

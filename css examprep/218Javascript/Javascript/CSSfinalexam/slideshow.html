@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+</head>
+<body>
+    <img src="1.png" alt="Slideshow" name="image" height="500px" width="600px">
+    <input type="button" value="Previous" onclick="changeSlide(-1)">
+    <input type="button" value="Next" onclick="changeSlide(1)">
+</body>
+<script>
+    var imgArr = ['1.png', '2.jpg', '3.jpg', '4.png'];
+    var count = 0;
+    function changeSlide(slidenumber) {
+        count += slidenumber;
+        if(count > imgArr.length - 1) {
+            count = 0;
+        }
+        if(count < 0) {
+            count = imgArr.length - 1;
+        }
+        document.image.src = imgArr[count];
+    }
+</script>
+</html>

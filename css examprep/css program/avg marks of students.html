@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>avg marks of students</title>
+</head>
+<body>
+    <script>
+        var student=[['ayush',80],['dhiraj',90],['gaurav',75],['akshay',35],['atul',60]];
+        var avgmarks=0;
+
+        for(var i=0;i<student.length;i++)
+        {
+            avgmarks+=student[i][1];
+        }
+        avg=(avgmarks/student.length);
+        document.write("average grade is "+avg)
+
+        if(avg<60)
+        {
+            document.write("E")
+        }
+        else if(avg<70)
+        {
+            document.write("D");
+        }
+        else if(avg<80)
+        {
+            document.write("C")
+        }
+        else if(avg<90)
+        {
+            document.write("B")
+        }
+        else if(avg<100)
+        {
+            document.write("A")
+        }
+        else{
+            document.write("invalid");
+        }
+    </script>
+</body>
+</html>

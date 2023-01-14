@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var rows = 1;
+        var cols = 5;
+        var student = new Array(rows);
+        for (var i = 0; i < rows; i++) {
+            student[i] = new Array(cols);
+        }
+        for (var i = 0; i < rows; i++) {
+
+            for (var j = 0; j < cols; j++) {
+                if (j == 0)
+                    student[i][j] = prompt("enter name")
+                if (j == 1)
+                    student[i][j] = prompt("enter roll no")
+                if (j == 2)
+                    student[i][j] = prompt("enter age")
+                if (j == 3)
+                    student[i][j] = prompt("enter percentage")
+
+
+            }
+        }
+        document.write("student whose age is greater than 18 and having distiction class is");
+        document.write("<table border=1>")
+        document.write("<tr><td> name </td>  <td> roll no</td><td> age </td><td> percentage</td></tr>");
+        for (var x = 0; x < student.length; x++) {
+            document.write("<br>");
+            document.write("<tr>");
+
+            for (var y = 0; y < student[x].length; y++) {
+                if (student[x][2] > 18 && student[x][3] > 90)
+                    document.write("<td>" + student[x][y] + "</td>")
+            }
+            document.write("</tr>");
+
+        }
+        document.write("</table>")
+
+    </script>
+</body>
+
+</html>

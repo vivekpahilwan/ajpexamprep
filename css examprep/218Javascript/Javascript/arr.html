@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Students Information</title>
+</head>
+<body>
+    <script>
+        var n;
+        n=prompt("How many student's information due to want to enter?: ");
+        var cols=4;
+        var student = new Array(n);
+        for(var i=0; i<n; i++) {
+            student[i] = new Array(cols);
+        }
+        for(var i in student) {
+            alert("Enter Details of Student no."+i);
+            for(var j=0; j<cols; j++) {
+                if(j==0) {
+                    student[i][j] = prompt("Enter Name:");
+                }
+                if(j==1) {
+                    student[i][j] = prompt("Enter Age:");
+                }
+                if(j==2) {
+                    student[i][j] = prompt("Enter Class:");
+                }
+                if(j==3) {
+                    student[i][j] = prompt("Enter Percentage:");
+                }
+            }
+        }
+        document.write("<table border=1>");
+        document.write("<tr><td>Name</td><td>Age</td><td>Class</td><td>Percentage</td></tr>");
+        for(var x of student) {
+            document.write("<tr>");
+            for(var y of x) {
+                document.write("<td>"+y+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        document.write("<br>");
+        document.write("<table border=1>");
+        document.write("<tr><td>Name</td><td>Age</td><td>Class</td><td>Percentage</td></tr>");
+        for(var a of student) {
+            document.write("<tr>");
+            for(var b of a) {
+                if(a[1]>18 && a[3]>=85) {
+                    if(a[2]=="TYCM") {
+                        document.write("<td bgcolor='red'>"+b+"</td>");
+                    }
+                    else {
+                        document.write("<td>"+b+"</td>");
+                    }
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

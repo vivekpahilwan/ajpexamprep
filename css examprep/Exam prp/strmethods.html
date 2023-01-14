@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+</body>
+<script>
+
+
+
+    var str = "HelloJavascript";
+    var str2 = "World";
+
+    document.write("charAt(5) = "+str.charAt(5) + "<br>"); //dosent count last
+    document.write("str.substring(5, 14) = "+str.substring(5, 14) + "<br>"); //dosent count last
+    document.write("str.substr(5, 14) = "+str.substr(5, 14) + "<br>"); //counts last char
+
+
+    // get char using pos
+    document.write(str.charAt(5) + "<br>");
+    //joining 2 str
+    document.write(str.concat(str2) + "<br>");
+
+    //get pos of char
+    document.write(str.indexOf("a") + "<br>");
+    document.write(str.lastIndexOf("a") + "<br>");
+
+
+    document.write(str.replace("Hello", "Vivek") + "<br>");
+
+    document.write(str.split("") + "<br>");
+
+    document.write(str.toUpperCase() + "<br>");
+    document.write(str.toLowerCase());
+</script>
+
+</html>

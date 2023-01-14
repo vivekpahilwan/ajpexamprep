@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identify students class in mark using else if ladder</title>
+</head>
+
+<body>
+    <script>
+        var per = prompt("Enter the percentile");
+        if (per < 40) {
+            alert("Fail");
+
+        } else if (per >= 40 && per < 60) {
+            alert("2nd class");
+
+        } else if (per >= 60 && per < 80) {
+            alert("1st class");
+        } else if (per >= 80 && per <= 100) {
+            alert("Distinction");
+        } else if (per < 0) {
+            alert("Invalid");
+        } else if (per > 100) {
+            alert("Invalid");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form>
+        <input type="email" name="Gmail" id="em" placeholder="Email"><br>
+        <input type="password" name="Password" id="pass" placeholder="Password"><br>
+        <input type="button" value="Submit" id="btn" onclick="nextForm(this.form)">
+    </form>
+    <script>
+        function nextForm(form) {
+            var email="krishporwal16@gmail.com";
+            var pass="krish";
+            if(email==form.Gmail.value && pass==form.Password.value) {
+                window.open("func.html");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    <input type="text" name="Firstname" id="fn" placeholder="First Name" onmouseover="window.status='Welcome!';return true">
+    <input type="text" name="Lastname" id="ln" placeholder="Last Name">
+    <input type="button" value="Write Cookie" onclick="writeCookie()">
+    <input type="button" value="Read Cookie" onclick="readCookie()">
+    <input type="button" value="Delete Cookie" onclick="deleteCookie()">
+    <script>
+        function writeCookie() {
+            var fn = document.getElementById('fn').value;
+            var ln = document.getElementById('ln').value;
+            document.cookie = "First Name =" + fn;
+            document.cookie = "Last Name =" + ln;
+        }
+        function readCookie() {
+            var name, value;
+            allCookies = document.cookie;
+            cookieArray = allCookies.split(';');
+            for(var i in cookieArray) {
+                name = cookieArray[i].split('=')[0];
+                value = cookieArray[i].split('=')[1];
+                document.write("Name: " + name + " Value: " + value + "<br>");
+            }
+        }
+        function deleteCookie() {
+            var now = new Date();
+            now.setMonth(now.getMonth() - 1);
+            document.cookie = "First Name =; expires = " + now.toUTCString() + ";";
+            document.cookie = "Last Name =; expires = " + now.toUTCString() + ";";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+<body>
+    <script>
+        var country = ["Japan","Korea","India","France"];
+        var arr = [2,5,4,6,7,3];
+        country.push("Australia");
+        country.push("Singapore");
+        country.shift();
+        document.write(country.length+"<br>");
+        country.unshift("Tibet");
+        country.unshift("Nepal");
+        for(var i of country) {
+            document.write(i+"<br>");
+        }
+        document.write("<br>");
+        arr.reverse();
+        for(var j of arr) {
+            document.write(j+"<br>");
+        }
+        document.write("<br>");
+        arr.sort()
+        for(var k of arr) {
+            document.write(k+"<br>");
+        }
+        document.write("<br>");
+    </script>
+</body>
+</html>

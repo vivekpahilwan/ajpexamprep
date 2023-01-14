@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+<body>
+    <script>
+        var str = "Satara";
+        document.write("Length= "+str.length+"<br>");
+        document.write("<br>");
+        for(var j of str) {
+            document.write(j+"<br>");
+        }
+        document.write("<br> Consonants in the string "+str+" are:<br>");
+        for(var i of str) {
+            if(i!="a" && i!="A" && i!="e" && i!="E" && i!="i" && i!="I" && i!="o" && i!="O" && i!="u" && i!="U") {
+                document.write(i+"<br>");
+            }
+        }
+        document.write("<br>");
+        document.write(str.toLowerCase()+"<br>");
+        document.write("<br>");
+        document.write(str.toUpperCase()+"<br>");
+        document.write("<br>");
+    </script>
+</body>
+</html>

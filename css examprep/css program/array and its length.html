@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array and its length</title>
+</head>
+<body>
+    <script>
+        //using array literal
+       var arr=["dhiraj","ishan","ayush","gaurav"]
+
+       document.write("array elements are")  
+       for(i=0;i<arr.length;i++)
+       {
+        document.write("<br> "+arr[i]);
+       }
+        var len=arr.length;
+        document.write("<br>length of array is "+len+"<br>")
+        
+        arr.push("sanket");// push method is used
+        document.write(" <br> array after adding one more element <br>"+arr)
+
+        var n=find("ayush") //find method
+        document.write(n)
+
+       arr.pop();//pop method is used 
+       document.write("<br> array after poping one element " +arr+"<br>")
+
+       arr.reverse();// reverse method is used
+       document.write("<br> array after reversing "+arr+"<br>")
+
+       arr.unshift("vivek","krish"); //unshift method
+       document.write("<br> array after unshifting elements "+arr+"<br>")
+
+       arr.shift()// shift method used
+       document.write("<br> array afetr shifting elements "+arr+"<br>")
+
+       arr.sort();//sort method is used
+       document.write("<br> array after sorting "+arr+"<br>")
+
+       var str1=arr.join("_");// joining array using join method
+       document.write(str1)
+
+       var str2=arr.concat();//using concat method
+       document.write("<br>"+str2)
+
+    //using new keyword
+
+    // var arra=new Array();
+    // arra[0]="arjun";
+    // arra[1]="anu";
+    // arra[2]="ajun";
+    // arra[3]="arun";
+    // for(i=0;i<arra.length;i++)
+    // {
+    //     document.write("<br>"+arra[i])
+    // }
+    
+
+    </script>
+</body>
+</html>
