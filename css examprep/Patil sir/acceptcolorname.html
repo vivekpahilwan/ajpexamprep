@@ -7,11 +7,11 @@ CSS Program: accept the color name from user and change the background color of 
     <script>
         function bgcolor(color) {
             var color = prompt("enter color name");
-            document.body.style.background = color;
+            body.style.background = color;
         }
     </script>
 
-<body>
+<body id="body">
     <input type="button" value="Change Color" onclick="bgcolor();" />
 </body>
 
