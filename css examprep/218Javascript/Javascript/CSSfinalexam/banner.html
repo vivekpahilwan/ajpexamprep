@@ -9,11 +9,17 @@
     </a>
 </body>
 <script>
+    //take an array of images
     var bannerArr = ['1.png', '2.jpg', '3.jpg', '4.png'];
+    //take an array of links for mapping with images
     var linkArr = ["www.google.com", "www.facebook.com", "www.instagram.com", "www.twtter.com"];
+    //take a counter
     var bannerCount = 0;
+
     function bannerChange() {
+        //inc banner counter by 1
         bannerCount++;
+
         if(bannerCount == bannerArr.length) {
             bannerCount = 0;
         }
