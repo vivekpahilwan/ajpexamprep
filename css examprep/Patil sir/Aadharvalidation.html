@@ -6,6 +6,8 @@ CSS Program: Aadhar card validation
 <head></head>
 <h2>nnnn.nnnn.nnnn or nnnn-nnnn-nnnn</h2>
 <script type="text/javascript">
+    var aadharno = prompt("Enter aadhar no.");
+    
     function myFunction(aadharno) {
         var re = /^([0-9]{4}.[0-9]{4}.[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
         if (re.test(aadharno)) {
@@ -14,14 +16,11 @@ CSS Program: Aadhar card validation
         else {
             alert("aadhar is not valid");
         }
-    }
+    }   
+    myFunction(aadharno);
 </script>
 
 <body>
-    <script type="text/javascript">
-        var aadharno = prompt("Enter aadhar no.");
-        myFunction(aadharno);
-    </script>
 </body>
 
 </html>
