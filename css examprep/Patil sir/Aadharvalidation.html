@@ -1,0 +1,27 @@
+CSS Program: Aadhar card validation
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+<h2>nnnn.nnnn.nnnn or nnnn-nnnn-nnnn</h2>
+<script type="text/javascript">
+    function myFunction(aadharno) {
+        var re = /^([0-9]{4}.[0-9]{4}.[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
+        if (re.test(aadharno)) {
+            alert("aadhar is valid");
+        }
+        else {
+            alert("aadhar is not valid");
+        }
+    }
+</script>
+
+<body>
+    <script type="text/javascript">
+        var aadharno = prompt("Enter aadhar no.");
+        myFunction(aadharno);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+CSS program: check the given string is palindrome or not
+EX: madam, nitin these are palindrome i.e. normal and reverse appears the same
+
+<html>
+
+<head></head>
+<title></title>
+<script>
+    var string = prompt('Enter a string: ');
+    function checkPalindrome() {
+
+        // convert string to an array
+        const arrayValues = string.split('');
+
+        // reverse the array values
+        const reverseArrayValues = arrayValues.reverse();
+
+        // convert array to string
+        const reverseString = reverseArrayValues.join('');
+
+        if (string == reverseString) {
+            document.write(string, " It is a palindrome");
+        }
+        else {
+            document.write(string, " It is not a palindrome");
+        }   
+    }
+
+
+
+
+</script>
+
+<body>
+
+    <input type="button" value="Check" onclick="checkPalindrome();" />
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+Banner or Rotating Banner Program
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script language="Javascript">
+
+        MyBanners = new Array('banner1.jpg', 'banner2.jpg', 'banner3.jpg', 'images.jpg');
+
+        banner_count = 0;
+
+
+        function DisplayBanners() {
+
+            if (document.images) {
+
+                banner_count++;
+
+                if (banner_count == MyBanners.length) {
+
+                    banner_count = 0;
+
+                } document.BannerChange.src = MyBanners[banner_count];
+                setTimeout("DisplayBanners()", 1000);
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="DisplayBanners()">
+
+    <center>
+        <h1> Displaying Banner </h1>
+
+        <img src="bannerl.jpg" width="700" height="200" name="BannerChange">
+
+    </center>
+
+</body>
+
+</html>

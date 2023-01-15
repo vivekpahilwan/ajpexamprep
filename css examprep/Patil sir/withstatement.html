@@ -1,0 +1,25 @@
+use of "with" statement
+
+The with statement adds the given object to the head of the scope chain during the evaluation of its statement body.
+
+Program:
+<html>
+
+<head>
+    <title></title>
+    <h2>The with statement adds the given object to the head of the scope chain during the evaluation of its statement
+        body. </h2>
+</head>
+
+<body>
+    <script>
+        let area;
+        const r = 10;
+        with (Math) {
+            area = PI * r * r;
+        }
+        document.write("The area of Circle: " + area + "</br>");
+    </script>
+</body>
+
+</html>

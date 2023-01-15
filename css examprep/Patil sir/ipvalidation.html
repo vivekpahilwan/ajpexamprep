@@ -1,0 +1,28 @@
+CSS Program: IP address Validation
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+<h2>IP address validation</h2>
+<script type="text/javascript">
+    function myFunction(ipno) {
+
+        var re = /^([0-9]{1}|[0-9]{2}|[0-9]{3}).([0-9]{1}|[0-9]{2}|[0-9]{3}).([0-9]{1}|[0-9]{2}|[0-9]{3}).([0-9]{1}|[0-9]{2}|[0-9]{3})$/;
+        if (re.test(ipno)) {
+            alert("IP address is valid");
+        }
+        else {
+            alert("IP address is not valid");
+        }
+    }
+</script>
+
+<body>
+    <script type="text/javascript">
+        var ipno = prompt("Enter IP address.");
+        myFunction(ipno);
+    </script>
+</body>
+
+</html>
