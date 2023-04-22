@@ -11,3 +11,4 @@ for i in num:
     sum = sum + int(i)
 
 print(sum)
+print(type(sum))
