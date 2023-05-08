@@ -1,2 +1,4 @@
-List = ["a2e", 23, 24, 3.45, "hrllo"]
-print(List)
+import platform
+
+x = dir(platform)
+print(platform.system)
