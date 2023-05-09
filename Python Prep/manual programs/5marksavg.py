@@ -1,4 +1,4 @@
-# x = list(map(int, input("Enter multiple values: ").split()))
+33# x = list(map(int, input("Enter multiple values: ").split()))
 x = list(float(n) for n in input("Enter marks of 5 sub").split())
 avg = sum(x)/len(x)
 
