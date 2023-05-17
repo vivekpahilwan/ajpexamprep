@@ -20,7 +20,3 @@ def product(a, b, c):
 
 
 product(4, 5)
-
-class abc:
-    def methodofclass(self, arg):
-        print(a)
